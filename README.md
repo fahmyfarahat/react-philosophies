@@ -730,7 +730,7 @@ The requirement is to display special kinds of buttons you can click to shop for
     <summary>❌ View a not-so-good solution</summary>
 
 ```tsx
-type ShopCategoryTileProps = {
+type ShopCategoryProps = {
   isBooked: boolean
   icon: ReactNode
   label: string
@@ -738,12 +738,12 @@ type ShopCategoryTileProps = {
   items?: {name: string, quantity: number}[]
 }
 
-const ShopCategoryTile = ({
+const ShopCategory = ({
   icon,
   label,
   items
   componentInsideModal,
-}: ShopCategoryTileProps ) => {
+}: ShopCategoryProps ) => {
   const [openDialog, setOpenDialog] = useState(false)
   const [hover, setHover] = useState(false)
   const disabled = !items || items.length  === 0
